@@ -12,6 +12,8 @@ class ViewController: UIViewController {
   
   // MARK: - Properties
 
+  let manager: ViewManager = ViewManager.shared
+  
   var keyboard: CGRect = CGRect.zero
 
   var keyboardIsVisible: Bool = false
@@ -22,6 +24,10 @@ class ViewController: UIViewController {
   
   // MARK: - Selectors
 
+  /**
+   * Notification Handler
+   * - parameter: Notification
+   */
   @objc func notificationHandler(_ notification: Notification) {
     if let userInfo = notification.userInfo {
       if let screenFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect {
@@ -43,18 +49,40 @@ class ViewController: UIViewController {
     } // ./have userInfo
   } // ./notificationHandler
   
+  /**
+   * Awake From Nib
+   */
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    self.manager.view = self
+  } // ./awakeFromNib
+  
+  /**
+   * View Did Load
+   */
   override func viewDidLoad() {
     super.viewDidLoad()
-  }
+  } // ./viewDidLoad
   
+  /**
+   * View Will Appear
+   * - parameter: Bool (animated)
+   */
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    NotificationCenter.default.addObserver(self, selector: #selector(ViewController.notificationHandler(_:)), name: .UIKeyboardWillChangeFrame, object: nil)
-  }
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(ViewController.notificationHandler(_:)),
+      name: .UIKeyboardWillChangeFrame, object: nil)
+  } // ./viewWillAppear
   
+  /**
+   * View Did Disappear
+   * - parameter: Bool (animated)
+   */
   override func viewDidDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
     NotificationCenter.default.removeObserver(self)
-  }
+  } // ./viewDidDisappear
   
 } // ./ViewController

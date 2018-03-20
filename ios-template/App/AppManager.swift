@@ -22,7 +22,7 @@ class AppManager {
    * Init
    */
   private init() {
-    if let storedData = UserDefaults.standard.data(forKey: "app") {
+    if let storedData = UserDefaults.standard.data(forKey: Key.app) {
       if let storedObject = NSKeyedUnarchiver.unarchiveObject(with: storedData) as? App {
         self.object = storedObject
       } else {
@@ -38,7 +38,7 @@ class AppManager {
    */
   func save() {
     let dataToStore = NSKeyedArchiver.archivedData(withRootObject: self.object)
-    UserDefaults.standard.set(dataToStore, forKey: "app")
+    UserDefaults.standard.set(dataToStore, forKey: Key.app)
     UserDefaults.standard.synchronize()
   } // ./save
   

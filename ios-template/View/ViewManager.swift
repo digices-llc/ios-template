@@ -2,8 +2,8 @@
 //  ViewManager.swift
 //  ios-template
 //
-//  Created by Digices LLC on 3/20/18.
-//  Copyright © 2018 Digices LLC. All rights reserved.
+//  Created by Roderic Linguri <linguri@digices.com>
+//  Copyright © 2017 Digices LLC. All rights reserved.
 //
 
 import UIKit
@@ -13,6 +13,8 @@ class ViewManager {
   // MARK: - Properties
 
   static let shared: ViewManager = ViewManager()
+  
+  var view: ViewController?
   
   // MARK: - ViewManager
 

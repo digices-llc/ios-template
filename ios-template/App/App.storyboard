@@ -21,7 +21,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NaB-Sn-dDy">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
-                                    <segue destination="uPu-LA-Gn8" kind="embed" id="R3j-4Z-0u8"/>
+                                    <segue destination="uPu-LA-Gn8" kind="embed" identifier="appEmbedView" id="R3j-4Z-0u8"/>
                                 </connections>
                             </containerView>
                         </subviews>
