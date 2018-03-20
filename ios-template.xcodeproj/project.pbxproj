@@ -13,6 +13,12 @@
 		9AA1F5A220616A4000889E28 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1F5A120616A4000889E28 /* Key.swift */; };
 		9AA1F5A420616C7300889E28 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1F5A320616C7300889E28 /* Color.swift */; };
 		9AA1F5A620616E1300889E28 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1F5A520616E1300889E28 /* Image.swift */; };
+		9ACC76512061BE4C000175D2 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACC764B2061BE4C000175D2 /* Connection.swift */; };
+		9ACC76522061BE4C000175D2 /* ConnectionManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACC764C2061BE4C000175D2 /* ConnectionManagerDelegate.swift */; };
+		9ACC76532061BE4C000175D2 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACC764D2061BE4C000175D2 /* ConnectionManager.swift */; };
+		9ACC76542061BE4C000175D2 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACC764E2061BE4C000175D2 /* ConnectionError.swift */; };
+		9ACC76552061BE4C000175D2 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACC764F2061BE4C000175D2 /* HTTPMethod.swift */; };
+		9ACC76562061BE4C000175D2 /* AuthType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACC76502061BE4C000175D2 /* AuthType.swift */; };
 		B235718D2061358000609299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B235718C2061358000609299 /* Assets.xcassets */; };
 		B23571902061358000609299 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B235718E2061358000609299 /* LaunchScreen.storyboard */; };
 		B2357199206135AD00609299 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2357198206135AD00609299 /* UIKit.framework */; };
@@ -33,6 +39,12 @@
 		9AA1F5A120616A4000889E28 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		9AA1F5A320616C7300889E28 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		9AA1F5A520616E1300889E28 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		9ACC764B2061BE4C000175D2 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		9ACC764C2061BE4C000175D2 /* ConnectionManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManagerDelegate.swift; sourceTree = "<group>"; };
+		9ACC764D2061BE4C000175D2 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		9ACC764E2061BE4C000175D2 /* ConnectionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionError.swift; sourceTree = "<group>"; };
+		9ACC764F2061BE4C000175D2 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		9ACC76502061BE4C000175D2 /* AuthType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthType.swift; sourceTree = "<group>"; };
 		B23571822061358000609299 /* ios-template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B235718C2061358000609299 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B235718F2061358000609299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +84,19 @@
 			path = Global;
 			sourceTree = "<group>";
 		};
+		9ACC764A2061BE4C000175D2 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				9ACC764B2061BE4C000175D2 /* Connection.swift */,
+				9ACC764C2061BE4C000175D2 /* ConnectionManagerDelegate.swift */,
+				9ACC764D2061BE4C000175D2 /* ConnectionManager.swift */,
+				9ACC764E2061BE4C000175D2 /* ConnectionError.swift */,
+				9ACC764F2061BE4C000175D2 /* HTTPMethod.swift */,
+				9ACC76502061BE4C000175D2 /* AuthType.swift */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
 		B23571792061358000609299 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +123,7 @@
 				B235718E2061358000609299 /* LaunchScreen.storyboard */,
 				B23571912061358000609299 /* Info.plist */,
 				9AA1F59E206169FF00889E28 /* Global */,
+				9ACC764A2061BE4C000175D2 /* Connection */,
 				B27D8DB12061458600F44E9C /* View */,
 				B27D8DA5206138E300F44E9C /* App */,
 			);
@@ -211,15 +237,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ACC76522061BE4C000175D2 /* ConnectionManagerDelegate.swift in Sources */,
 				B27D8DB72061461700F44E9C /* ViewManager.swift in Sources */,
+				9ACC76532061BE4C000175D2 /* ConnectionManager.swift in Sources */,
+				9ACC76512061BE4C000175D2 /* Connection.swift in Sources */,
 				B27D8DB32061459300F44E9C /* ViewController.swift in Sources */,
 				B27D8DAC20613AE000F44E9C /* App.swift in Sources */,
 				9AA1F5A020616A1300889E28 /* Identifier.swift in Sources */,
 				B27D8DA8206138F700F44E9C /* AppDelegate.swift in Sources */,
+				9ACC76552061BE4C000175D2 /* HTTPMethod.swift in Sources */,
 				9AA1F5A220616A4000889E28 /* Key.swift in Sources */,
 				B27D8DAA2061393700F44E9C /* AppManager.swift in Sources */,
 				B27D8DAE20613D2F00F44E9C /* AppController.swift in Sources */,
 				9AA1F5A420616C7300889E28 /* Color.swift in Sources */,
+				9ACC76562061BE4C000175D2 /* AuthType.swift in Sources */,
+				9ACC76542061BE4C000175D2 /* ConnectionError.swift in Sources */,
 				9AA1F5A620616E1300889E28 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
