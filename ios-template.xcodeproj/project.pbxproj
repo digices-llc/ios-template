@@ -10,6 +10,14 @@
 		B235718D2061358000609299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B235718C2061358000609299 /* Assets.xcassets */; };
 		B23571902061358000609299 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B235718E2061358000609299 /* LaunchScreen.storyboard */; };
 		B2357199206135AD00609299 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2357198206135AD00609299 /* UIKit.framework */; };
+		B27D8DA8206138F700F44E9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D8DA7206138F700F44E9C /* AppDelegate.swift */; };
+		B27D8DAA2061393700F44E9C /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D8DA92061393700F44E9C /* AppManager.swift */; };
+		B27D8DAC20613AE000F44E9C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D8DAB20613AE000F44E9C /* App.swift */; };
+		B27D8DAE20613D2F00F44E9C /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D8DAD20613D2F00F44E9C /* AppController.swift */; };
+		B27D8DB020613F9C00F44E9C /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27D8DAF20613F9C00F44E9C /* App.storyboard */; };
+		B27D8DB32061459300F44E9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D8DB22061459300F44E9C /* ViewController.swift */; };
+		B27D8DB5206145DD00F44E9C /* View.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27D8DB4206145DD00F44E9C /* View.storyboard */; };
+		B27D8DB72061461700F44E9C /* ViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D8DB62061461700F44E9C /* ViewManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +26,15 @@
 		B235718F2061358000609299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B23571912061358000609299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2357198206135AD00609299 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B27D8DA6206138F700F44E9C /* ios-template-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-template-Bridging-Header.h"; sourceTree = "<group>"; };
+		B27D8DA7206138F700F44E9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B27D8DA92061393700F44E9C /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		B27D8DAB20613AE000F44E9C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		B27D8DAD20613D2F00F44E9C /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		B27D8DAF20613F9C00F44E9C /* App.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
+		B27D8DB22061459300F44E9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B27D8DB4206145DD00F44E9C /* View.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = View.storyboard; path = "ios-template/View/View.storyboard"; sourceTree = SOURCE_ROOT; };
+		B27D8DB62061461700F44E9C /* ViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +72,8 @@
 				B235718C2061358000609299 /* Assets.xcassets */,
 				B235718E2061358000609299 /* LaunchScreen.storyboard */,
 				B23571912061358000609299 /* Info.plist */,
+				B27D8DB12061458600F44E9C /* View */,
+				B27D8DA5206138E300F44E9C /* App */,
 			);
 			path = "ios-template";
 			sourceTree = "<group>";
@@ -65,6 +84,29 @@
 				B2357198206135AD00609299 /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B27D8DA5206138E300F44E9C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B27D8DAF20613F9C00F44E9C /* App.storyboard */,
+				B27D8DAD20613D2F00F44E9C /* AppController.swift */,
+				B27D8DA92061393700F44E9C /* AppManager.swift */,
+				B27D8DAB20613AE000F44E9C /* App.swift */,
+				B27D8DA7206138F700F44E9C /* AppDelegate.swift */,
+				B27D8DA6206138F700F44E9C /* ios-template-Bridging-Header.h */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B27D8DB12061458600F44E9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B27D8DB4206145DD00F44E9C /* View.storyboard */,
+				B27D8DB22061459300F44E9C /* ViewController.swift */,
+				B27D8DB62061461700F44E9C /* ViewManager.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +141,7 @@
 				TargetAttributes = {
 					B23571812061358000609299 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -127,7 +170,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B23571902061358000609299 /* LaunchScreen.storyboard in Resources */,
+				B27D8DB5206145DD00F44E9C /* View.storyboard in Resources */,
 				B235718D2061358000609299 /* Assets.xcassets in Resources */,
+				B27D8DB020613F9C00F44E9C /* App.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B27D8DB72061461700F44E9C /* ViewManager.swift in Sources */,
+				B27D8DB32061459300F44E9C /* ViewController.swift in Sources */,
+				B27D8DAC20613AE000F44E9C /* App.swift in Sources */,
+				B27D8DA8206138F700F44E9C /* AppDelegate.swift in Sources */,
+				B27D8DAA2061393700F44E9C /* AppManager.swift in Sources */,
+				B27D8DAE20613D2F00F44E9C /* AppController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,11 +317,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ios-template/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.digices.ios-template";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ios-template/App/ios-template-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -280,11 +334,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ios-template/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.digices.ios-template";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ios-template/App/ios-template-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
